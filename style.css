@@ -1,5 +1,43 @@
-.box{
+body {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  margin: 0; /* ✅ 去掉默认 margin */
+  font-weight: 600;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.87);
+  position: relative; /* ✅ 使 ::before 定位基于 body */
+  overflow: hidden; /* ✅ 防止 ::before 溢出 */
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(./assets/cat.jpg) no-repeat center center;
+  background-size: cover;
+  transform: scaleX(-1); /* 水平翻转 */
+  z-index: -1;
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+  /* position: relative;
+  z-index: 1000; */
+}
+
+.box {
+  padding: 16px 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  border-radius: 12px;
+  background: rgba(194, 241, 255, 0.9);
+  border-radius: 16px;
 }
