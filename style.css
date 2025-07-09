@@ -8,6 +8,7 @@ body {
   color: rgba(0, 0, 0, 0.87);
   position: relative; /* ✅ 使 ::before 定位基于 body */
   overflow: hidden; /* ✅ 防止 ::before 溢出 */
+  overflow-y: auto;
 }
 body::before {
   content: "";
