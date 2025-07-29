@@ -45,4 +45,9 @@ p{
   border-radius: 12px;
   background: rgba(194, 241, 255, 0.9);
   border-radius: 16px;
+  max-width: 100%;
+  >span{ 
+    work-break: break-all;
+  }
+
 }
